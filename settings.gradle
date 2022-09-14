@@ -1,6 +1,3 @@
-rootProject.name = "BaseLibrary"
+rootProject.name = "MVP"
 include ':app'
-include ':base'
 include ':mvp'
-include ':mvvm'
-include ':aop'
