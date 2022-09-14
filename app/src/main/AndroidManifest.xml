@@ -22,12 +22,6 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.zhangteng.app.activity.BaseMvvmDbDemoDbActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.zhangteng.app.activity.BaseMvvmDemoActivity"
-            android:exported="false" />
-        <activity
             android:name="com.zhangteng.app.activity.BaseTitlebarDemoActivity"
             android:exported="false" />
         <activity
@@ -59,18 +53,6 @@
             android:exported="false" />
         <activity
             android:name="com.zhangteng.app.activity.NineImageActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.zhangteng.app.ui.mvvmdb.MvvmDbActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.zhangteng.app.ui.mvvm.MvvmActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.zhangteng.app.activity.BaseListMvvmDemoActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.zhangteng.app.activity.BaseListMvvmDbDemoDbActivity"
             android:exported="false" />
     </application>
 

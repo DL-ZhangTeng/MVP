@@ -13,8 +13,6 @@ import com.zhangteng.app.mvp.model.imodel.IMainModel
 import com.zhangteng.app.mvp.presenter.MainPresenter
 import com.zhangteng.app.mvp.presenter.ipresenter.IMainPresenter
 import com.zhangteng.app.mvp.view.IMainView
-import com.zhangteng.app.ui.mvvm.MvvmActivity
-import com.zhangteng.app.ui.mvvmdb.MvvmDbActivity
 import com.zhangteng.mvp.mvp.BaseMvpActivity
 import com.zhangteng.mvp.utils.LoadingPresenterHandler
 import com.zhangteng.utils.StateViewHelper
@@ -83,26 +81,6 @@ class MainActivity : BaseMvpActivity<IMainView, IMainModel, IMainPresenter>(), I
     @TimeLog
     fun onClickNineImage(v: View) {
         jumpToActivity<NineImageActivity>()
-    }
-
-    @TimeLog
-    fun onClickMvvm(v: View) {
-        jumpToActivity<MvvmActivity>()
-    }
-
-    @TimeLog
-    fun onClickMvvmDb(v: View) {
-        jumpToActivity<MvvmDbActivity>()
-    }
-
-    @TimeLog
-    fun onClickListMvvm(v: View) {
-        jumpToActivity<BaseListMvvmDemoActivity>()
-    }
-
-    @TimeLog
-    fun onClickListMvvmDb(v: View) {
-        jumpToActivity<BaseListMvvmDbDemoDbActivity>()
     }
 
     override fun createStateViewHelper(): StateViewHelper {
