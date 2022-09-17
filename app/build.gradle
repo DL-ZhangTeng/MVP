@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.zhangteng.mvp"
+        applicationId "com.zhangteng.app"
         minSdkVersion 21
         targetSdkVersion 32
         versionCode 1
