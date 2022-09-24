@@ -11,10 +11,10 @@ allprojects {
     }
 }
 
-implementation 'com.github.DL-ZhangTeng:MVP:1.5.0'
+implementation 'com.github.DL-ZhangTeng:MVP:2.0.0'
 ```
 
-## 部分工具功能(安装配套插件快速创建模板文件BaseLibraryTemplatePlugin-1.3.0.jar)
+## 部分工具功能(安装配套插件快速创建模板文件BaseLibraryTemplatePlugin-2.0.0.jar)
 
 ### MVP工具包（com/zhangteng/mvp）
 
