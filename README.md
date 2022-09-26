@@ -18,31 +18,31 @@ implementation 'com.github.DL-ZhangTeng:MVP:2.0.0'
 
 ### MVP工具包（com/zhangteng/mvp）
 
-工具包名/类名| 描述
---- | ---
-IModel| M层接口
-IView| V层接口
-IPresenter| P层接口
-BaseModel| M层空实现
-BaseLoadingView| V层带加载中方法的接口
-BaseStateView|V层带网络状态方法的接口，继承自BaseLoadingView
-BaseRefreshView| V层带刷新方法的接口，继承自BaseNoNetworkView
-BasePresenter| P层实现，实现了attachView、detachView、onDestroy等方法
-BaseLoadingPresenter| P层加载中动画实现，增加了getBaseLoadingView()方法
-BaseHttpEntity| model到presenter的回调
-LoadingPresenterHandler| 使用代理的方式自动调用加载动画开启与关闭方法，同步执行方法时才有意义(好像没啥用...)
-BaseMvpFragment| 使用Mvp模式Fragment基类（可使用插件自动创建Fragment。[插件仓库地址](https://github.com/DL-ZhangTeng/BaseLibraryTemplatePlugin)）
-BaseListMvpFragment| 使用Mvp模式列表Fragment基类
-BaseMvpActivity| 使用Mvp模式Activity基类（可使用插件自动创建Activity。[插件仓库地址](https://github.com/DL-ZhangTeng/BaseLibraryTemplatePlugin)）
-BaseListMvpActivity| 使用Mvp模式列表Activity基类
+| 工具包名/类名                 | 描述                                                                                                       |
+|-------------------------|----------------------------------------------------------------------------------------------------------|
+| IModel                  | M层接口                                                                                                     |
+| IView                   | V层接口                                                                                                     |
+| IPresenter              | P层接口                                                                                                     |
+| BaseModel               | M层空实现                                                                                                    |
+| BaseLoadingView         | V层带加载中方法的接口                                                                                              |
+| BaseStateView           | V层带网络状态方法的接口，继承自BaseLoadingView                                                                          |
+| BaseRefreshView         | V层带刷新方法的接口，继承自BaseNoNetworkView                                                                          |
+| BasePresenter           | P层实现，实现了attachView、detachView、onDestroy等方法                                                               |
+| BaseLoadingPresenter    | P层加载中动画实现，增加了getBaseLoadingView()方法                                                                      |
+| BaseHttpEntity          | model到presenter的回调                                                                                       |
+| LoadingPresenterHandler | 使用代理的方式自动调用加载动画开启与关闭方法，同步执行方法时才有意义(好像没啥用...)                                                             |
+| BaseMvpFragment         | 使用Mvp模式Fragment基类（可使用插件自动创建Fragment。[插件仓库地址](https://github.com/DL-ZhangTeng/BaseLibraryTemplatePlugin)） |
+| BaseListMvpFragment     | 使用Mvp模式列表Fragment基类                                                                                      |
+| BaseMvpActivity         | 使用Mvp模式Activity基类（可使用插件自动创建Activity。[插件仓库地址](https://github.com/DL-ZhangTeng/BaseLibraryTemplatePlugin)） |
+| BaseListMvpActivity     | 使用Mvp模式列表Activity基类                                                                                      |
 
 ## 混淆
 -keep public class com.zhangteng.**.*{ *; }
 ## 历史版本
 
-版本| 更新| 更新时间
---- | --- | ---
-v2.0.0| 分离出MVP库| 2022/9/14 at 23:14
+| 版本     | 更新      | 更新时间               |
+|--------|---------|--------------------|
+| v2.0.0 | 分离出MVP库 | 2022/9/14 at 23:14 |
 
 ## 赞赏
 如果您喜欢MVP，或感觉MVP帮助到了您，可以点右上角“Star”支持一下，您的支持就是我的动力，谢谢
