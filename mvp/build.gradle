@@ -41,7 +41,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //noinspection GradleDynamicVersion
-    implementation 'com.github.DL-ZhangTeng:BaseLibrary:2.0.+'
+    implementation 'com.github.DL-ZhangTeng:BaseLibrary:2.0.1'
     //noinspection GradleDynamicVersion
-    implementation 'com.github.DL-ZhangTeng:Utils:2.0.+'
+    implementation 'com.github.DL-ZhangTeng:Utils:2.0.1'
 }
