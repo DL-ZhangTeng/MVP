@@ -14,10 +14,11 @@ import com.zhangteng.app.mvp.model.imodel.IBaseListMvpDemoFragmentModel
 import com.zhangteng.app.mvp.presenter.BaseListMvpDemoFragmentPresenter
 import com.zhangteng.app.mvp.presenter.ipresenter.IBaseListMvpDemoFragmentPresenter
 import com.zhangteng.app.mvp.view.IBaseListMvpDemoFragmentView
+import com.zhangteng.base.base.BaseAdapter
 import com.zhangteng.mvp.mvp.BaseListMvpFragment
 
 class BaseListMvpDemoFragment :
-    BaseListMvpFragment<IBaseListMvpDemoFragmentView, IBaseListMvpDemoFragmentModel, IBaseListMvpDemoFragmentPresenter, BaseListMvpDemoBean, BaseListMvpDemoAdapter>(),
+    BaseListMvpFragment<IBaseListMvpDemoFragmentView, IBaseListMvpDemoFragmentModel, IBaseListMvpDemoFragmentPresenter, BaseListMvpDemoBean, BaseAdapter.DefaultViewHolder, BaseListMvpDemoAdapter>(),
     IBaseListMvpDemoFragmentView {
 
     companion object {

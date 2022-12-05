@@ -10,8 +10,8 @@ import com.zhangteng.mvp.base.IView
  * 使用Mvp模式Activity基类
  * Created by swing on 2017/11/23.
  */
-abstract class BaseListMvpActivity<V : IView, M : IModel, P : IPresenter<V, M>,
-        D, A : BaseAdapter<D, BaseAdapter.DefaultViewHolder>> : BaseListActivity<D, A>() {
+abstract class BaseListMvpActivity<V : IView, M : IModel, P : IPresenter<V, M>, D, VH : BaseAdapter.DefaultViewHolder, A : BaseAdapter<D, VH>> :
+    BaseListActivity<D, VH, A>() {
 
     protected var mPresenter: P? = null
 

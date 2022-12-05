@@ -12,8 +12,8 @@ import com.zhangteng.mvp.base.IView
  * 使用Mvp模式Fragment基类
  * Created by swing on 2021/7/3.
  */
-abstract class BaseListMvpFragment<V : IView, M : IModel, P : IPresenter<V, M>,
-        D, A : BaseAdapter<D, BaseAdapter.DefaultViewHolder>> : BaseListFragment<D, A>() {
+abstract class BaseListMvpFragment<V : IView, M : IModel, P : IPresenter<V, M>, D, VH : BaseAdapter.DefaultViewHolder, A : BaseAdapter<D, VH>> :
+    BaseListFragment<D, VH, A>() {
 
     protected var mPresenter: P? = null
 
