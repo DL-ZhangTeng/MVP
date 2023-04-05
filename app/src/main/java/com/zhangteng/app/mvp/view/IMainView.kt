@@ -1,5 +1,5 @@
 package com.zhangteng.app.mvp.view
 
-import com.zhangteng.mvp.base.BaseLoadingView
+import com.zhangteng.mvp.base.BaseStateView
 
-interface IMainView : BaseLoadingView<String?>
+interface IMainView : BaseStateView<String?>

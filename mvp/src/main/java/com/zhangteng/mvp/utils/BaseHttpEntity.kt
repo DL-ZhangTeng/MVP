@@ -21,7 +21,7 @@ abstract class BaseHttpEntity<T> {
      * 请求开始
      */
     open fun onStart() {
-        if (iView != null && iView is BaseLoadingView<*>) (iView as BaseLoadingView<*>?)?.showLoadingView()
+        if (iView != null && iView is BaseLoadingView<*>) (iView as BaseLoadingView<*>?)?.showProgressDialog()
     }
 
     abstract fun onSuccess(data: T?)
@@ -30,7 +30,12 @@ abstract class BaseHttpEntity<T> {
      * 无网络
      */
     open fun onNoNetworkError() {
-        if (iView != null && iView is BaseStateView<*>) (iView as BaseStateView<*>?)?.showNoNetView()
+        if (iView != null && iView is BaseStateView<*>)
+            (iView as BaseStateView<*>?)
+                ?.showNoNetView(
+                    (iView as BaseStateView<*>?)
+                        ?.getContentView()
+                )
     }
 
     /**
@@ -47,8 +52,13 @@ abstract class BaseHttpEntity<T> {
      * 请求完成
      */
     open fun onFinish() {
-        if (iView != null && iView is BaseStateView<*>) (iView as BaseStateView<*>?)?.showContentView()
+        if (iView != null && iView is BaseStateView<*>)
+            (iView as BaseStateView<*>?)
+                ?.showContentView(
+                    (iView as BaseStateView<*>?)
+                        ?.getContentView()
+                )
         if (iView != null && iView is BaseRefreshView<*>) (iView as BaseRefreshView<*>?)?.finishRefreshOrLoadMore()
-        if (iView != null && iView is BaseLoadingView<*>) (iView as BaseLoadingView<*>?)?.dismissLoadingView()
+        if (iView != null && iView is BaseLoadingView<*>) (iView as BaseLoadingView<*>?)?.dismissProgressDialog()
     }
 }

@@ -28,9 +28,9 @@ class LoadingPresenterHandler<V : BaseLoadingView<*>, M : IModel, T : BaseLoadin
         ) {
             return method.invoke(presenter, *args.orEmpty())
         }
-        presenter?.getBaseLoadingView()?.showLoadingView()
+        presenter?.getBaseLoadingView()?.showProgressDialog()
         val result = method?.invoke(presenter, *args.orEmpty())
-        presenter?.getBaseLoadingView()?.dismissLoadingView()
+        presenter?.getBaseLoadingView()?.dismissProgressDialog()
         return result
     }
 }

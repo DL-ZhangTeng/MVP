@@ -61,9 +61,9 @@ dependencies {
     implementation(project(":mvp"))
 
     //base
-    implementation 'com.github.DL-ZhangTeng:BaseLibrary:2.2.0'
+    implementation 'com.github.DL-ZhangTeng:BaseLibrary:2.3.2'
     //PublishAdapter类demo使用
-    implementation 'com.github.DL-ZhangTeng:ImagePicker:1.4.0'
+    implementation 'com.github.DL-ZhangTeng:ImagePicker:1.4.2'
     implementation 'com.scwang.smart:refresh-layout-kernel:2.0.3'      //核心必须依赖
     implementation 'com.scwang.smart:refresh-header-classics:2.0.3'    //经典刷新头
     implementation 'com.scwang.smart:refresh-footer-classics:2.0.3'    //经典加载
@@ -72,13 +72,13 @@ dependencies {
     implementation 'com.alibaba:fastjson:1.2.70'
 
     //aop
-    implementation 'com.github.DL-ZhangTeng:AOP:2.0.0'
+    implementation 'com.github.DL-ZhangTeng:AOP:2.0.1'
     implementation 'org.aspectj:aspectjrt:1.9.9.1'
     //PermissionsAspect类demo使用(不使用Permissions注解可不导入)
-    implementation 'com.github.DL-ZhangTeng:RequestPermission:1.2.0'
+    implementation 'com.github.DL-ZhangTeng:RequestPermission:1.2.2'
 
     //网络
-    implementation 'com.github.DL-ZhangTeng:HttpUtils:2.2.0'
+    implementation 'com.github.DL-ZhangTeng:HttpUtils:2.3.0'
     implementation 'androidx.lifecycle:lifecycle-common:2.4.1'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.1'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
@@ -88,5 +88,5 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-scalars:2.8.1'
     implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
-    implementation 'com.github.DL-ZhangTeng:Utils:2.0.3'
+    implementation 'com.github.DL-ZhangTeng:Utils:2.1.2'
 }

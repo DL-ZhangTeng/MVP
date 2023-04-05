@@ -8,7 +8,10 @@ import com.zhangteng.aop.annotation.CheckNet
 import com.zhangteng.aop.annotation.Permissions
 import com.zhangteng.aop.annotation.SingleClick
 import com.zhangteng.aop.annotation.TimeLog
-import com.zhangteng.app.activity.*
+import com.zhangteng.app.activity.BaseDemoActivity
+import com.zhangteng.app.activity.NineImageActivity
+import com.zhangteng.app.activity.TabLayoutActivity
+import com.zhangteng.app.activity.TreeActivity
 import com.zhangteng.app.mvp.model.imodel.IMainModel
 import com.zhangteng.app.mvp.presenter.MainPresenter
 import com.zhangteng.app.mvp.presenter.ipresenter.IMainPresenter
@@ -45,15 +48,8 @@ class MainActivity : BaseMvpActivity<IMainView, IMainModel, IMainPresenter>(), I
         showToast(mPresenter?.testString())
     }
 
-    override fun showLoadingView() {
-        showProgressDialog()
-//        showNoNetView(tv_TextView)
-//        showEmptyView(tv_TextView)
-    }
-
-    override fun dismissLoadingView() {
-        dismissProgressDialog()
-//        showContentView(tv_TextView)
+    override fun getContentView(): View? {
+        return tv_TextView
     }
 
     override fun inflateView(data: String?) {
@@ -100,6 +96,10 @@ class MainActivity : BaseMvpActivity<IMainView, IMainModel, IMainPresenter>(), I
 
     override fun showProgressDialog(mLoadingText: String?) {
         mStateViewHelper.showProgressDialog(this, R.drawable.loading5, mLoadingText)
+    }
+
+    override fun dismissProgressDialog() {
+        mStateViewHelper.dismissProgressDialog()
     }
 
     override fun againRequestByStateViewHelper(view: View) {
