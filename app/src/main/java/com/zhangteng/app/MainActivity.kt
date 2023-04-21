@@ -3,7 +3,6 @@ package com.zhangteng.app
 import android.content.DialogInterface
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
 import com.zhangteng.aop.annotation.CheckNet
 import com.zhangteng.aop.annotation.Permissions
 import com.zhangteng.aop.annotation.SingleClick
@@ -12,18 +11,19 @@ import com.zhangteng.app.activity.BaseDemoActivity
 import com.zhangteng.app.activity.NineImageActivity
 import com.zhangteng.app.activity.TabLayoutActivity
 import com.zhangteng.app.activity.TreeActivity
+import com.zhangteng.app.databinding.ActivityMainBinding
 import com.zhangteng.app.mvp.model.imodel.IMainModel
 import com.zhangteng.app.mvp.presenter.MainPresenter
 import com.zhangteng.app.mvp.presenter.ipresenter.IMainPresenter
 import com.zhangteng.app.mvp.view.IMainView
-import com.zhangteng.mvp.mvp.BaseMvpActivity
+import com.zhangteng.mvp.mvp.vb.BaseMvpActivity
 import com.zhangteng.mvp.utils.LoadingPresenterHandler
 import com.zhangteng.utils.StateViewHelper
 import com.zhangteng.utils.jumpToActivity
 import java.lang.reflect.Proxy
 
-class MainActivity : BaseMvpActivity<IMainView, IMainModel, IMainPresenter>(), IMainView {
-    private var tv_TextView: TextView? = null
+class MainActivity : BaseMvpActivity<ActivityMainBinding, IMainView, IMainModel, IMainPresenter>(),
+    IMainView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +41,7 @@ class MainActivity : BaseMvpActivity<IMainView, IMainModel, IMainPresenter>(), I
 
     override fun initView() {
         super.initView()
-        tv_TextView = findViewById(R.id.tv_TextView)
+
     }
 
     override fun initData() {
@@ -49,7 +49,7 @@ class MainActivity : BaseMvpActivity<IMainView, IMainModel, IMainPresenter>(), I
     }
 
     override fun getContentView(): View? {
-        return tv_TextView
+        return mBinding?.tvTextView
     }
 
     override fun inflateView(data: String?) {
