@@ -13,31 +13,26 @@ import com.zhangteng.app.activity.TabLayoutActivity
 import com.zhangteng.app.activity.TreeActivity
 import com.zhangteng.app.databinding.ActivityMainBinding
 import com.zhangteng.app.mvp.model.imodel.IMainModel
-import com.zhangteng.app.mvp.presenter.MainPresenter
 import com.zhangteng.app.mvp.presenter.ipresenter.IMainPresenter
 import com.zhangteng.app.mvp.view.IMainView
 import com.zhangteng.mvp.mvp.vb.BaseMvpActivity
-import com.zhangteng.mvp.utils.LoadingPresenterHandler
 import com.zhangteng.utils.StateViewHelper
 import com.zhangteng.utils.jumpToActivity
-import java.lang.reflect.Proxy
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainActivity : BaseMvpActivity<ActivityMainBinding, IMainView, IMainModel, IMainPresenter>(),
     IMainView {
+
+    @Inject
+    override lateinit var mPresenter: IMainPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
 
-    override fun createPresenter(): IMainPresenter? {
-//        return MainPresenter()
-        return Proxy.newProxyInstance(
-            MainPresenter::class.java.classLoader,
-            arrayOf(IMainPresenter::class.java),
-            LoadingPresenterHandler(MainPresenter())
-        ) as IMainPresenter
-    }
 
     override fun initView() {
         super.initView()

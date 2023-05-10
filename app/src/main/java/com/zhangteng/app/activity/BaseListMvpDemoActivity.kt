@@ -18,12 +18,14 @@ class BaseListMvpDemoActivity :
     BaseListMvpActivity<IBaseListMvpDemoView, IBaseListMvpDemoModel, IBaseListMvpDemoPresenter, BaseListMvpDemoBean, BaseAdapter.DefaultViewHolder, BaseListMvpDemoAdapter>(),
     IBaseListMvpDemoView {
 
+    override var mPresenter: IBaseListMvpDemoPresenter = createPresenter()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_base_list_mvp_demo)
     }
 
-    override fun createPresenter(): IBaseListMvpDemoPresenter? {
+    fun createPresenter(): IBaseListMvpDemoPresenter {
         return BaseListMvpDemoPresenter()
 //        return Proxy.newProxyInstance(
 //            BaseListMvpDemoPresenter::class.java.classLoader,

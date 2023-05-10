@@ -21,6 +21,8 @@ class BaseListMvpDemoFragment :
     BaseListMvpFragment<IBaseListMvpDemoFragmentView, IBaseListMvpDemoFragmentModel, IBaseListMvpDemoFragmentPresenter, BaseListMvpDemoBean, BaseAdapter.DefaultViewHolder, BaseListMvpDemoAdapter>(),
     IBaseListMvpDemoFragmentView {
 
+    override var mPresenter: IBaseListMvpDemoFragmentPresenter = createPresenter()
+
     companion object {
         fun newInstance() = BaseListMvpDemoFragment()
     }
@@ -37,7 +39,7 @@ class BaseListMvpDemoFragment :
     /**
      *return Proxy.newProxyInstance(BaseListMvpDemoFragmentPresenter::class.java.classLoader, arrayOf(IBaseListMvpDemoFragmentPresenter::class.java), LoadingPresenterHandler(BaseListMvpDemoFragmentPresenter())) as IBaseListMvpDemoFragmentPresenter
      */
-    override fun createPresenter(): IBaseListMvpDemoFragmentPresenter? {
+    fun createPresenter(): IBaseListMvpDemoFragmentPresenter {
         return BaseListMvpDemoFragmentPresenter()
     }
 

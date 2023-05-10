@@ -13,25 +13,17 @@ import com.zhangteng.mvp.base.IView
 abstract class BaseListMvpActivity<V : IView, M : IModel, P : IPresenter<V, M>, D, VH : BaseAdapter.DefaultViewHolder, A : BaseAdapter<D, VH>> :
     BaseListActivity<D, VH, A>() {
 
-    protected var mPresenter: P? = null
+    abstract var mPresenter: P
 
     override fun initView() {
         super.initView()
-        mPresenter = createPresenter()
-        mPresenter?.attachView(this as V)
-        mPresenter?.onStart()
+        mPresenter.attachView(this as V)
+        mPresenter.onStart()
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        mPresenter?.detachView()
-        mPresenter?.onDestroy()
-        mPresenter = null
+        mPresenter.detachView()
+        mPresenter.onDestroy()
     }
-
-    /**
-     * 子类提供实现
-     * 创建对应页面的presenter
-     */
-    abstract fun createPresenter(): P?
 }
