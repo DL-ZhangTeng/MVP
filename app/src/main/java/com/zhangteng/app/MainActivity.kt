@@ -40,7 +40,7 @@ class MainActivity : BaseMvpActivity<ActivityMainBinding, IMainView, IMainModel,
     }
 
     override fun initData() {
-        showToast(mPresenter?.testString())
+        showToast(mPresenter.testString())
     }
 
     override fun getContentView(): View? {
@@ -72,38 +72,5 @@ class MainActivity : BaseMvpActivity<ActivityMainBinding, IMainView, IMainModel,
     @TimeLog
     fun onClickNineImage(v: View) {
         jumpToActivity<NineImageActivity>()
-    }
-
-    override fun createStateViewHelper(): StateViewHelper {
-        return StateViewHelper().apply {
-            againRequestListener = object : StateViewHelper.AgainRequestListener {
-                override fun request(view: View) {
-                    againRequestByStateViewHelper(view)
-                }
-            }
-            cancelRequestListener = object : StateViewHelper.CancelRequestListener {
-                override fun cancel(dialog: DialogInterface) {
-                    cancelRequestByStateViewHelper(dialog)
-                }
-            }
-        }
-    }
-
-    override fun showProgressDialog(mLoadingText: String?) {
-        mStateViewHelper.showProgressDialog(this, R.drawable.loading5, mLoadingText)
-    }
-
-    override fun dismissProgressDialog() {
-        mStateViewHelper.dismissProgressDialog()
-    }
-
-    override fun againRequestByStateViewHelper(view: View) {
-        super.againRequestByStateViewHelper(view)
-
-    }
-
-    override fun cancelRequestByStateViewHelper(dialog: DialogInterface) {
-        super.cancelRequestByStateViewHelper(dialog)
-
     }
 }

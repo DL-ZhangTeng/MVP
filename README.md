@@ -14,10 +14,10 @@ allprojects {
     }
 }
 
-implementation 'com.github.DL-ZhangTeng:MVP:2.4.0'
+implementation 'com.github.DL-ZhangTeng:MVP:2.5.0'
 ```
 
-## 部分工具功能(安装配套插件快速创建模板文件BaseLibraryTemplatePlugin-2.0.0.jar)
+## 部分工具功能(安装配套插件快速创建模板文件BaseLibraryTemplatePlugin-2.5.0.jar)
 
 ### MVP工具包（com/zhangteng/mvp）
 
@@ -47,6 +47,7 @@ implementation 'com.github.DL-ZhangTeng:MVP:2.4.0'
 
 | 版本     | 更新                 | 更新时间               |
 |--------|--------------------|--------------------|
+| v2.5.0 | 适配Hilt             | 2023/5/11 at 14:29 |
 | v2.4.0 | 增加ViewBinding实现    | 2023/4/21 at 23:14 |
 | v2.3.0 | 简化view层            | 2023/4/5 at 22:50  |
 | v2.2.0 | List模板增加VH泛型       | 2022/12/5 at 23:50 |
