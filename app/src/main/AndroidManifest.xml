@@ -9,7 +9,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.zhangteng.app.BaseLibraryApplication"
+        android:name=".BaseLibraryApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -22,13 +22,13 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.zhangteng.app.activity.BaseMvpDemoActivity"
+            android:name=".activity.BaseMvpDemoActivity"
             android:exported="false" />
         <activity
-            android:name="com.zhangteng.app.activity.BaseListMvpDemoActivity"
+            android:name=".activity.BaseListMvpDemoActivity"
             android:exported="false" />
         <activity
-            android:name="com.zhangteng.app.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
